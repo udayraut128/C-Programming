@@ -1,26 +1,38 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int myInt = 10;
-    double myDouble = 3.14;
-    char myChar = 'A';
-    bool myBool = true;
-    string myString = "Hello, C++";
+    // Integer variable
+    int age = 25;
+    printf("Age: %d\n", age);
 
-    cout << "Integer: " << myInt << endl;
-    cout << "Double: " << myDouble << endl;
-    cout << "Char: " << myChar << endl;
-    cout << "Boolean: " << myBool << endl;
-    cout << "String: " << myString << endl;
+    // Floating-point variable
+    float temperature = 36.6;
+    printf("Temperature: %.1f\n", temperature);
+
+    // Character variable
+    char grade = 'A';
+    printf("Grade: %c\n", grade);
+
+    // String (array of characters)
+    char name[] = "John";
+    printf("Name: %s\n", name);
+
+    // Double variable
+    double pi = 3.141592653589793;
+    printf("Value of Pi: %.15f\n", pi);
+
+    // Multiple variable declarations
+    int a = 10, b = 20, c = 30;
+    printf("a: %d, b: %d, c: %d\n", a, b, c);
 
     return 0;
 }
 
 // output
-// Integer: 10
-// Double: 3.14
-// Char: A
-// Boolean: 1
-// String: Hello, C++
+// Age: 25
+// Temperature: 36.6
+// Grade: A
+// Name: John
+// Value of Pi: 3.141592653589793
+// a: 10, b: 20, c: 30
