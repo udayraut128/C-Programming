@@ -1,33 +1,79 @@
 // A datatype in programming defines the type of data that a variable can hold, such as integers, floating-point numbers, characters, or boolean values. It determines the operations that can be performed on the data and how the data is stored in memory.
 
+#include <stdio.h>
 
-#include <iostream>
-using namespace std;
+// Structure
+struct Person
+{
+    char name[50];
+    int age;
+    float height;
+};
+
+// Enumeration
+enum Weekday
+{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
 
 int main()
 {
-    int myInt = 10;
-    float myFloat = 3.14f;
-    double myDouble = 3.14159;
-    char myChar = 'A';
-    bool myBool = true;
-    string myString = "Hello, C++";
+    // Basic data types
+    int num = 10;
+    float temperature = 36.6;
+    double pi = 3.141592653589793;
+    char letter = 'A';
 
-    cout << "Integer: " << myInt << endl;
-    cout << "Float: " << myFloat << endl;
-    cout << "Double: " << myDouble << endl;
-    cout << "Char: " << myChar << endl;
-    cout << "Boolean: " << myBool << endl;
-    cout << "String: " << myString << endl;
+    // Array
+    char name[] = "Alice";
+
+    // Pointer
+    int *ptr = &num;
+
+    // Structure
+    struct Person person1;
+    person1.age = 30;
+
+    // Union
+    union Data
+    {
+        int i;
+        float f;
+        char str[20];
+    };
+
+    union Data data;
+    data.i = 10;
+
+    // Enumeration
+    enum Weekday today = Wednesday;
+
+    printf("Integer: %d\n", num);
+    printf("Float: %.1f\n", temperature);
+    printf("Double: %.15f\n", pi);
+    printf("Char: %c\n", letter);
+    printf("Array: %s\n", name);
+    printf("Pointer: %d\n", *ptr);
+    printf("Structure Age: %d\n", person1.age);
+    printf("Union: %d\n", data.i);
+    printf("Enum: %d (Wednesday)\n", today);
 
     return 0;
 }
 
-
 // output
 // Integer: 10
-// Float: 3.14
-// Double: 3.14159
+// Float: 36.6
+// Double: 3.141592653589793
 // Char: A
-// Boolean: 1
-// String: Hello, C++
+// Array: Alice
+// Pointer: 10
+// Structure Age: 30
+// Union: 10
+// Enum: 3 (Wednesday)
